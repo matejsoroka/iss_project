@@ -7,6 +7,17 @@ duration = info.Duration;
 symbols = total_samples / info.BitsPerSample;
 sampleRate = info.SampleRate;
 
+s = audioread('xsorok02.wav');
+ss = filter(B, A, s);
+
+hold on;
+subplot(223);
+plot(ss(1:320));
+subplot(223);
+plot(s(1:320));
+title("Filtrovany nacteny signal");
+hold off;
+
 % 2
 len = length(s)
 i = 8;
