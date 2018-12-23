@@ -65,9 +65,10 @@ xlabel("t [s]");
 % 6
 shifted = circshift(filtered, -15);
 plot(x, shifted);
-stem(stem_spaced, bit_samples(1:20));
+stem(stem_spaced, bit_samples_filtered(1:20));
 xlim([0, 0.02]);
 hold off
+
 
 % 7
 tmp = 0;
@@ -111,6 +112,5 @@ plot3(-x,x,p);
 axis xy;
 colorbar;
 
-% 13
+% 14
 printf("13 - %d\n", r);
-
